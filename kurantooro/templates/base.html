@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{% block title %}Accueil{% endblock %} - Kuran - Tooro</title>
+        <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{ STATIC_URL }}css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    </head>
+    <body class="{{ page }}">
+        <div class="container">
+
+            {% block content %}{% endblock %}
+
+        </div>
+
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.autocomplete.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/date-fr-FR.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap-datetimepicker.min.js"></script>
+        <script type="text/javascript">
+
+        $(document).ready(function (){
+            {% block extra_js %}{% endblock %}
+        });
+        </script>
+
+    </body>
+</html>
